@@ -1,0 +1,3 @@
+function Travelogue () {
+  this.places = []
+}

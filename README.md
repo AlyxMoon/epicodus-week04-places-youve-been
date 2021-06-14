@@ -10,3 +10,27 @@
 - [Arthur Lee](https://github.com/Gengur123)
 
 ## Tests
+
+- be able to add object, multiple properties:
+  - location
+  - notes
+  - time of year
+  - landmarks
+  - money spent
+  - show details
+  - function: compare time to current time
+
+- be able to toggle showing details for a place
+
+#### Describe: Travelogue ()
+
+```
+Test: When created, starts with initialized properties
+Code: new Travelogue()
+Expected: { places: [] }
+```
+
+- create a travelogue instance
+- add a place you've been to the travelogue
+- toggle the `showing details` property for a place in the travelogue
+- run `timeSinceVisited` and get the difference in time between current and `time of year` property, rounded by month/year
