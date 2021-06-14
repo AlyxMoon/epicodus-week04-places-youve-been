@@ -38,9 +38,9 @@ const tests = [
   },
 
   function () {
-    console.log('timeComparison(): Returns correct year/month when year is different by 1')
+    console.log('monthAndYearComparison(): Returns correct year/month when year is different by 1')
 
-    const actual = timeComparison('6/14/2021', '6/14/2020')
+    const actual = monthAndYearComparison('6/14/2021', '6/14/2020')
     const expected = { month: 0, year: 1 }
 
     const isCorrect = (
@@ -58,9 +58,9 @@ const tests = [
   },
 
   function () {
-    console.log('timeComparison(): Returns correct year/month when year is different by 5')
+    console.log('monthAndYearComparison(): Returns correct year/month when year is different by 5')
 
-    const actual = timeComparison('6/14/2025', '6/14/2020')
+    const actual = monthAndYearComparison('6/14/2025', '6/14/2020')
     const expected = { month: 0, year: 5 }
 
     const isCorrect = (
@@ -78,9 +78,9 @@ const tests = [
   },
 
   function () {
-    console.log('timeComparison(): Returns correct year/month when month is different by 1')
+    console.log('monthAndYearComparison(): Returns correct year/month when month is different by 1')
 
-    const actual = timeComparison('6/14/2020', '5/14/2020')
+    const actual = monthAndYearComparison('6/14/2020', '5/14/2020')
     const expected = { month: 1, year: 0 }
 
     const isCorrect = (
@@ -98,9 +98,9 @@ const tests = [
   },
 
   function () {
-    console.log('timeComparison(): Returns correct year/month when month is different by 3')
+    console.log('monthAndYearComparison(): Returns correct year/month when month is different by 3')
 
-    const actual = timeComparison('6/14/2020', '4/14/2020')
+    const actual = monthAndYearComparison('6/14/2020', '4/14/2020')
     const expected = { month: 2, year: 0 }
 
     const isCorrect = (
@@ -118,9 +118,9 @@ const tests = [
   },
 
   function () {
-    console.log('timeComparison(): Returns correct year/month when year and month are different')
+    console.log('monthAndYearComparison(): Returns correct year/month when year and month are different')
 
-    const actual = timeComparison('8/14/2022', '4/14/2020')
+    const actual = monthAndYearComparison('8/14/2022', '4/14/2020')
     const expected = { month: 4, year: 2 }
 
     const isCorrect = (

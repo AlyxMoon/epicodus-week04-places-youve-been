@@ -52,35 +52,35 @@ Expected: {
 }
 ```
 
-#### Describe: timeComparison()
+#### Describe: monthAndYearComparison()
 
 ```
 Test: Returns correct year/month when year is different by 1
-Code: timeComparison('6/14/2021', '6/14/2020')
+Code: monthAndYearComparison('6/14/2021', '6/14/2020')
 Expected: { month: 0, year: 1 }
 ```
 
 ```
 Test: Returns correct year/month when year is different by 5
-Code: timeComparison('6/14/2025', '6/14/2020')
+Code: monthAndYearComparison('6/14/2025', '6/14/2020')
 Expected: { month: 0, year: 5 }
 ```
 
 ```
 Test: Returns correct year/month when month is different by 1
-Code: timeComparison('6/14/2020', '5/14/2020')
+Code: monthAndYearComparison('6/14/2020', '5/14/2020')
 Expected: { month: 1, year: 0 }
 ```
 
 ```
 Test: Returns correct year/month when month is different by 3
-Code: timeComparison('6/14/2020', '4/14/2020')
+Code: monthAndYearComparison('6/14/2020', '4/14/2020')
 Expected: { month: 2, year: 0 }
 ```
 
 ```
 Test: Returns correct year/month when year and month are different
-Code: timeComparison('8/14/2022', '4/14/2020')
+Code: monthAndYearComparison('8/14/2022', '4/14/2020')
 Expected: { month: 4, year: 2 }
 ```
 
