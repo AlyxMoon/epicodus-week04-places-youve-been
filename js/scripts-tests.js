@@ -76,6 +76,66 @@ const tests = [
       console.log('Expected:', expected)
     }
   },
+
+  function () {
+    console.log('timeComparison(): Returns correct year/month when month is different by 1')
+
+    const actual = timeComparison('6/14/2020', '5/14/2020')
+    const expected = { month: 1, year: 0 }
+
+    const isCorrect = (
+      actual.month === expected.month &&
+      actual.year === expected.year
+    )
+
+    const resultColor = isCorrect ? 'green' : 'red'
+    console.log(`%c${isCorrect}`, `background-color: ${resultColor}; color: white;`)
+
+    if (!isCorrect) {
+      console.log('Actual:', actual)
+      console.log('Expected:', expected)
+    }
+  },
+
+  function () {
+    console.log('timeComparison(): Returns correct year/month when month is different by 3')
+
+    const actual = timeComparison('6/14/2020', '4/14/2020')
+    const expected = { month: 2, year: 0 }
+
+    const isCorrect = (
+      actual.month === expected.month &&
+      actual.year === expected.year
+    )
+
+    const resultColor = isCorrect ? 'green' : 'red'
+    console.log(`%c${isCorrect}`, `background-color: ${resultColor}; color: white;`)
+
+    if (!isCorrect) {
+      console.log('Actual:', actual)
+      console.log('Expected:', expected)
+    }
+  },
+
+  function () {
+    console.log('timeComparison(): Returns correct year/month when year and month are different')
+
+    const actual = timeComparison('8/14/2022', '4/14/2020')
+    const expected = { month: 4, year: 2 }
+
+    const isCorrect = (
+      actual.month === expected.month &&
+      actual.year === expected.year
+    )
+
+    const resultColor = isCorrect ? 'green' : 'red'
+    console.log(`%c${isCorrect}`, `background-color: ${resultColor}; color: white;`)
+
+    if (!isCorrect) {
+      console.log('Actual:', actual)
+      console.log('Expected:', expected)
+    }
+  },
 ]
 
 function runTests() {
