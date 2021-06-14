@@ -21,8 +21,29 @@
     <h1>Places You've Been</h1>
   </header>
 
-  <main class="container">
 
+  <main class="container">
+    <form id="word-counter">
+      <div class="form-group">
+        <p>Input the location you went to!</p>
+        <input id="location" name="location" class="form-control"></input>
+
+        <p>How much money did you spend there?</p>
+        <input type="number" id="money-spent" name="money-spent" class="form-control">
+
+        <p>What date did you go there?</p>
+        <input type="date" id="date" name="date" class="form-control">
+
+        <p>What landmarks did you visit?</p>
+        <input type="text" id="landmarks" name="landmarks" class="form-control">
+
+        <p>What are your thoughts about the trip?</p>
+        <input type="text" id="notes" name="notes" class="form-control">
+        
+        <br>
+        <button type="submit" class="btn btn-success">Submit Survey</button>
+      </div>
+    </form>
   </main>
 </body>
 </html>
