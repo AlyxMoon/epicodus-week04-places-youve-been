@@ -30,6 +30,28 @@ Code: new Travelogue()
 Expected: { places: [] }
 ```
 
+```
+Test: Can add a place to the travelogue
+Code: travelogue.addPlace({
+  location: 'Japan',
+  notes: 'I enjoyed the sushi',
+  timeOfYear: 'June 13, 2021',
+  landmarks: 'Mount Fuji',
+  moneySpent: 1000000,
+})
+Expected: { 
+  places: [
+    {
+      location: 'Japan',
+      notes: 'I enjoyed the sushi',
+      timeOfYear: 'June 13, 2021',
+      landmarks: 'Mount Fuji',
+      moneySpent: 1000000,
+    },
+  ],
+}
+```
+
 - create a travelogue instance
 - add a place you've been to the travelogue
 - toggle the `showing details` property for a place in the travelogue
