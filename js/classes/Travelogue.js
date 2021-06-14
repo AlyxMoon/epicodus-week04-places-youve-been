@@ -24,6 +24,12 @@ function timeComparison(anotherDate){
   let todayYear = todayDate.getFullYear()
   let year = new Date(anotherDate)
   let otherYear = year.getFullYear()
-  console.log(otherYear)
+  let yearDifference = todayYear - otherYear
+  let wordYear 
+  if (yearDifference === 1) {
+    wordYear = "year"
+  }else {
+    wordYear = "years"
+  }
+  return `It's been ${yearDifference} ${wordYear} since you been there`
 }
-timeComparison("6/14/1800")
