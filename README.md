@@ -52,6 +52,11 @@ Expected: {
 }
 ```
 
+```
+Test: Can compare todays date and another date
+Code: timeComparison('6/14/2020')
+Expected: "It's been 1 year since you been there"
+```
 - create a travelogue instance
 - add a place you've been to the travelogue
 - toggle the `showing details` property for a place in the travelogue
