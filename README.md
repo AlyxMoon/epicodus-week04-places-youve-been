@@ -22,7 +22,7 @@
 
 - be able to toggle showing details for a place
 
-#### Describe: Travelogue ()
+#### Describe: Travelogue()
 
 ```
 Test: When created, starts with initialized properties
@@ -52,11 +52,39 @@ Expected: {
 }
 ```
 
+#### Describe: timeComparison()
+
 ```
-Test: Can compare todays date and another date
-Code: timeComparison('6/14/2020')
-Expected: "It's been 1 year since you been there"
+Test: Returns correct year/month when year is different by 1
+Code: timeComparison('6/14/2021', '6/14/2020')
+Expected: { month: 0, year: 1 }
 ```
+
+```
+Test: Returns correct year/month when year is different by 5
+Code: timeComparison('6/14/2025', '6/14/2020')
+Expected: { month: 0, year: 5 }
+```
+
+```
+Test: Returns correct year/month when month is different by 1
+Code: timeComparison('6/14/2020', '5/14/2020')
+Expected: { month: 1, year: 0 }
+```
+
+```
+Test: Returns correct year/month when month is different by 3
+Code: timeComparison('6/14/2020', '4/14/2020')
+Expected: { month: 2, year: 0 }
+```
+
+```
+Test: Returns correct year/month when year and month are different
+Code: timeComparison('8/14/2022', '4/14/2020')
+Expected: { month: 4, year: 2 }
+```
+
+
 - create a travelogue instance
 - add a place you've been to the travelogue
 - toggle the `showing details` property for a place in the travelogue

@@ -35,29 +35,53 @@ const tests = [
     }
 
     console.log('Result', actual, expected)
-  }
+  },
+
+  function () {
+    console.log('timeComparison(): Returns correct year/month when year is different by 1')
+
+    const actual = timeComparison('6/14/2021', '6/14/2020')
+    const expected = { month: 0, year: 1 }
+
+    const isCorrect = (
+      actual.month === expected.month &&
+      actual.year === expected.year
+    )
+
+    const resultColor = isCorrect ? 'green' : 'red'
+    console.log(`%c${isCorrect}`, `background-color: ${resultColor}; color: white;`)
+
+    if (!isCorrect) {
+      console.log('Actual:', actual)
+      console.log('Expected:', expected)
+    }
+  },
+
+  function () {
+    console.log('timeComparison(): Returns correct year/month when year is different by 5')
+
+    const actual = timeComparison('6/14/2025', '6/14/2020')
+    const expected = { month: 0, year: 5 }
+
+    const isCorrect = (
+      actual.month === expected.month &&
+      actual.year === expected.year
+    )
+
+    const resultColor = isCorrect ? 'green' : 'red'
+    console.log(`%c${isCorrect}`, `background-color: ${resultColor}; color: white;`)
+
+    if (!isCorrect) {
+      console.log('Actual:', actual)
+      console.log('Expected:', expected)
+    }
+  },
 ]
 
 function runTests() {
-  const firstTest = tests[0]
-  const secondTest = tests[1]
-
-  firstTest()
-  secondTest()
-  runTest3()
+  tests.forEach(function (test) {
+    test()
+  })
 }
 
-function runTest3() {
-  console.log("The timeComparsion function will equal It's been 1 year since you been there")
-  console.log("expected")
-  const actual = timeComparison("6/14/2020")
-  const expected = "It's been 1 year since you been there"
-  console.log("This is what we put in: 6/14/2020")
-  console.log("result", actual)
-  console.log("expected", expected)
-
-  const resultColor = actual === expected ? 'green' : 'red'
-
-  console.log(`%c${actual === expected}`, `background-color: ${resultColor}; color: white;`)
-}
 runTests()
