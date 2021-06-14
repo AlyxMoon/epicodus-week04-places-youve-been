@@ -22,6 +22,12 @@
 
 - be able to toggle showing details for a place
 
+
+- create a travelogue instance
+- add a place you've been to the travelogue
+- toggle the `showing details` property for a place in the travelogue
+- run `timeSinceVisited` and get the difference in time between current and `time of year` property, rounded by month/year
+
 #### Describe: Travelogue()
 
 ```
@@ -84,8 +90,34 @@ Code: monthAndYearComparison('8/14/2022', '4/14/2020')
 Expected: { month: 4, year: 2 }
 ```
 
+#### Describe: monthAndYearComparisonString()
 
-- create a travelogue instance
-- add a place you've been to the travelogue
-- toggle the `showing details` property for a place in the travelogue
-- run `timeSinceVisited` and get the difference in time between current and `time of year` property, rounded by month/year
+```
+Test: Returns correct string with the same year, same month
+Code: monthAndYearComparisonString('6/14/2020', '6/14/2020')
+Expected: "It's been 0 years and 0 months since you visited!"
+```
+
+```
+Test: Returns correct string with the same year, different month
+Code: monthAndYearComparisonString('8/14/2020', '4/14/2020')
+Expected: "It's been 0 years and 4 months since you visited!"
+```
+
+```
+Test: Returns correct string with the different year, same month
+Code: monthAndYearComparisonString('4/14/2027', '4/14/2020')
+Expected: "It's been 7 years and 0 months since you visited!"
+```
+
+```
+Test: Returns correct string with different year and month
+Code: monthAndYearComparisonString('9/14/2023', '4/14/2020')
+Expected: "It's been 3 years and 5 months since you visited!"
+```
+
+```
+Test: Returns correct string with when the year is greater but month is less
+Code: monthAndYearComparisonString('3/14/2023', '4/14/2020')
+Expected: "It's been 2 years and 11 months since you visited!"
+```

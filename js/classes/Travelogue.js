@@ -28,3 +28,8 @@ function monthAndYearComparison (dateString1, dateString2) {
 
   return { month: monthDifference, year: yearDifference }
 }
+
+// name pending
+function monthAndYearComparisonString (dateString1, dateString2) {
+  const difference = monthAndYearComparison(dateString1, dateString2)
+}
